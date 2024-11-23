@@ -11,6 +11,7 @@ public class UIManager : MonoSingleton<UIManager>
 
     public static bool fullScreen = true;
 
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))

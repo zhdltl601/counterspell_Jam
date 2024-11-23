@@ -17,6 +17,7 @@ public class GameManager : MonoSingleton<GameManager>
     public static GameState CurrentState { get; private set; } = GameState.A;
     public bool isTitle = true;
 
+    public static bool isFirstScene = true;
 
     public static void IncreaseMaxGoalCount()
     {

@@ -53,9 +53,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.isTitle) return;
+        if (GameManager.isFirstScene) return;
 
-        if (transform.rotation.y <= -20)
+
+        if (transform.position.y <= -20)
         {
             Dead();
         }
@@ -68,7 +69,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
         {
-            CreateTorchlight();
+            if(canCreateTorchlight)
+                CreateTorchlight();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -87,6 +89,7 @@ public class Player : MonoBehaviour
     {
         if(isDead)return;
 
+        isDead = true;
         Rigidbody.isKinematic = true;
         GetComponent<Collider>().enabled = false;
         StateMachine.ChangeState(PlayerStateEnum.Dead);
@@ -115,9 +118,10 @@ public class Player : MonoBehaviour
         targetDir.y = 0;
         targetDir.z = 0;
         
-        if(targetDir.magnitude == 0)return;
-        
         Quaternion lookDir = Quaternion.LookRotation(targetDir);
+        if (Quaternion.Angle(lookDir, Quaternion.identity) <= 0.1f) 
+            return;
+            
         transform.rotation = lookDir;
     }
 
