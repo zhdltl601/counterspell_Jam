@@ -15,5 +15,5 @@ public enum MonoSingletonFlags : ushort
 {
     None            	  = 0,
     DontDestroyOnLoad     = 1 << 0,
-    SingletonPreset       = 1 << 1,
+    //SingletonPreset       = 1 << 1
 }
