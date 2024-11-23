@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-[MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
+//[MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
 public class PopUpManager : MonoSingleton<PopUpManager>
 {
     public SettingPanel settingPanel;
