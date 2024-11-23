@@ -14,7 +14,7 @@ public class TitleUI : MonoBehaviour
 
     [SerializeField] private float _buttonOffsetPosition;
     private float _buttonOriginLocalPositionX;
-    
+
     private readonly WaitForSeconds _waitForSeconds = new WaitForSeconds(0.4f);
 
     private void Start()
@@ -54,6 +54,7 @@ public class TitleUI : MonoBehaviour
 
     public void ResetUIPosition()
     {
+        _titleCanvasGroup.interactable = true;
         _titleText.DOFade(1, 0.3f);
         foreach (var button in _buttons)
         {

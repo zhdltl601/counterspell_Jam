@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class SettingPanel : MonoBehaviour, IPopUpable
@@ -8,13 +9,13 @@ public class SettingPanel : MonoBehaviour, IPopUpable
     
     public void PopUp()
     {
-        _settingPanel.alpha = 1;
+        _settingPanel.DOFade(1, 0.15f);
         _settingPanel.interactable = true;
     }
 
     public void PopDown()
     {
-        _settingPanel.alpha = 0;
+        _settingPanel.DOFade(0, 0.15f);
         _settingPanel.interactable = false;
     }
 }
