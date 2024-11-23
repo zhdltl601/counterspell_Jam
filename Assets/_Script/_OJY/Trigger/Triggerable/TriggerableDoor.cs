@@ -22,7 +22,6 @@ public class TriggerableDoor : TriggerableObjectBase, IOnEnterReciver, IOnStayRe
     public void Move(float yVal)
     {
         isCritical = yVal < 0;
-        print(isCritical);
         Vector3 pos = transform.position + new Vector3(0, Time.deltaTime * yVal);
         pos.y = Mathf.Clamp(pos.y, initialPosition.y, initialPosition.y + maxY);
         transform.position = pos;

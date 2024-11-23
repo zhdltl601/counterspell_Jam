@@ -254,6 +254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioEmitterExit
       objectReference: {fileID: 0}
+    - target: {fileID: 1065205807022718352, guid: b546b178647483949b64a21f128c0d40,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2052570177682581137, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -267,12 +272,12 @@ PrefabInstance:
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
@@ -287,17 +292,17 @@ PrefabInstance:
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
@@ -350,6 +355,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioEmitterOnEnter
       objectReference: {fileID: 0}
+    - target: {fileID: 1065205807022718352, guid: b546b178647483949b64a21f128c0d40,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2052570177682581137, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -363,12 +373,12 @@ PrefabInstance:
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
@@ -383,17 +393,17 @@ PrefabInstance:
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3364638064897957037, guid: b546b178647483949b64a21f128c0d40,
         type: 3}
