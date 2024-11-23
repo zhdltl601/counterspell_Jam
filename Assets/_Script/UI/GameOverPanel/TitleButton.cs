@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class TitleButton : HoverButton
@@ -17,9 +13,10 @@ public class TitleButton : HoverButton
     {
         _titleButton.onClick.AddListener(HandleResetTitleEvent);
     }
-
+    
     private void HandleResetTitleEvent()
     {
+        print("dajidwaioajodjoa ");
         UIManager.Instance.ResetTitle();
     }
 }
