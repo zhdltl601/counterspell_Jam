@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -19,13 +20,13 @@ public class Player : MonoBehaviour
     public LayerMask whatIsGround;
     public Transform checkGroundTrm;
     public float checkGroundDistance;
-    
+
     [Header("Torchlight")] 
+    public bool canCreateTorchlight;
     public Torch torchlight;
     [SerializeField] private int torchlightCount;
     [SerializeField] private float torchDeadTime;
     private float torchDeadTimer;
-    
     
     private void Awake()
     {
@@ -40,9 +41,15 @@ public class Player : MonoBehaviour
         StateMachine.AddState(PlayerStateEnum.Dead , new PlayerDeadState(this , StateMachine , "Dead"));
         
         StateMachine.Init(PlayerStateEnum.Idle);
-            
+
+        GameManager.OnBReached += OnCreateTorchlight;
     }
-            
+
+    private void OnDestroy()
+    {
+        GameManager.OnBReached -= OnCreateTorchlight;
+    }
+
     private void Update()
     {
         StateMachine.currentState.Update();
@@ -70,6 +77,11 @@ public class Player : MonoBehaviour
         StateMachine.ChangeState(PlayerStateEnum.Dead);
     }
 
+    public void OnCreateTorchlight()
+    {
+        canCreateTorchlight = true;
+    }
+    
     public void AddTorchTimer(float amount)
     {
         if(isDead)return;
@@ -111,9 +123,7 @@ public class Player : MonoBehaviour
     }
     
     #endregion
-    
-    
-    
+        
     public bool CheckGround() => Physics.Raycast(checkGroundTrm.position , Vector3.down , checkGroundDistance , whatIsGround);
 
     private void CreateTorchlight()
@@ -122,9 +132,8 @@ public class Player : MonoBehaviour
 
         --torchlightCount;
         Torch newTorch = Instantiate(torchlight,transform.position,Quaternion.identity);
-       
     }
-    
+        
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
