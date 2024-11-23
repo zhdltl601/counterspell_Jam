@@ -22,10 +22,17 @@ public class GameManager : MonoSingleton<GameManager>
     public static int CurrentSceneIndex { get; private set; } = 0;
     public static void OnSceneFinished()
     {
-        CurrentSceneIndex++;
+        //CurrentSceneIndex++;
         print(CurrentSceneIndex);
         maxGoal = 0;
         SceneManager.LoadScene(CurrentSceneIndex);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            OnSceneFinished();
+        }
     }
     public static void IncreaseMaxGoalCount()
     {
