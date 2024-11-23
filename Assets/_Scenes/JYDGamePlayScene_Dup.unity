@@ -4657,6 +4657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aColliderActiver: {fileID: 241852109}
+  isTitle: 1
 --- !u!1 &1863939522
 GameObject:
   m_ObjectHideFlags: 0
