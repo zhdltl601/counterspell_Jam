@@ -27,7 +27,6 @@ public class Ploatform : MonoBehaviour
         Vector3 realTarget = GameManager.CurrentState == GameState.A ? target.position : origin;
         
         PointLight.color = greenColor; 
-        
         if((whatIsPlayer & (1 << other.gameObject.layer)) != 0)
         {
             other.gameObject.transform.SetParent(transform);
