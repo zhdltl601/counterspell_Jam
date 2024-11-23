@@ -24,6 +24,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         maxGoal = 0;
         goalCount = 0;
+        CurrentState = GameState.A;
         int nextSceneIndex = CurrentSceneIndex + 1;
         Debug.Log(nextSceneIndex);
         SceneManager.LoadScene(nextSceneIndex);
