@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2557491387690135343}
   - component: {fileID: 1446460203677685203}
   - component: {fileID: 7933453926597795307}
-  - component: {fileID: 2487447064337738339}
+  - component: {fileID: 5095933493480681572}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -42,7 +42,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31380350322083120}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -117,8 +117,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1496,8 +1496,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3620,7 +3620,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -4831,7 +4831,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &2487447064337738339
+--- !u!114 &5095933493480681572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4840,9 +4840,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 31380350322083120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1661883655488446778
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,7 +4869,7 @@ GameObject:
   - component: {fileID: 8404294961373362581}
   - component: {fileID: 5068250279331168327}
   - component: {fileID: 6405312286984419342}
-  - component: {fileID: 7156378507601901891}
+  - component: {fileID: 3071434685383362929}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -4885,7 +4900,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661883655488446778}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -4960,8 +4975,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6339,8 +6354,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8463,7 +8478,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -9674,7 +9689,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7156378507601901891
+--- !u!114 &3071434685383362929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9683,9 +9698,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661883655488446778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1771662666968264868
 GameObject:
   m_ObjectHideFlags: 0
@@ -9697,7 +9727,7 @@ GameObject:
   - component: {fileID: 5937886729677312395}
   - component: {fileID: 2269078450980475471}
   - component: {fileID: 5783293429051314545}
-  - component: {fileID: 8244939358441988481}
+  - component: {fileID: 2615472886657874130}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -9728,7 +9758,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771662666968264868}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -9803,8 +9833,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11182,8 +11212,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -13306,7 +13336,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -14517,7 +14547,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &8244939358441988481
+--- !u!114 &2615472886657874130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14526,9 +14556,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771662666968264868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2106774848905137939
 GameObject:
   m_ObjectHideFlags: 0
@@ -14540,7 +14585,7 @@ GameObject:
   - component: {fileID: 6606306710374755049}
   - component: {fileID: 8559627210349244677}
   - component: {fileID: 8872806406488005125}
-  - component: {fileID: 1894850829918190815}
+  - component: {fileID: 2558418332017939081}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -14571,7 +14616,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106774848905137939}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -14646,8 +14691,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -16025,8 +16070,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -18149,7 +18194,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -19360,7 +19405,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &1894850829918190815
+--- !u!114 &2558418332017939081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19369,9 +19414,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106774848905137939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2465196688320000896
 GameObject:
   m_ObjectHideFlags: 0
@@ -19383,7 +19443,7 @@ GameObject:
   - component: {fileID: 2511611238313716685}
   - component: {fileID: 3075671675049990577}
   - component: {fileID: 4610757957825685726}
-  - component: {fileID: 5812559674244456399}
+  - component: {fileID: 1564790834815385830}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -19414,7 +19474,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2465196688320000896}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -19489,8 +19549,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -20868,8 +20928,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -22992,7 +23052,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -24203,7 +24263,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5812559674244456399
+--- !u!114 &1564790834815385830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24212,9 +24272,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2465196688320000896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3094235971881280653
 GameObject:
   m_ObjectHideFlags: 0
@@ -33895,7 +33970,7 @@ GameObject:
   - component: {fileID: 6069508253657625103}
   - component: {fileID: 867893286540679772}
   - component: {fileID: 778573883091523470}
-  - component: {fileID: 202579333650233387}
+  - component: {fileID: 3762422108899808864}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -33926,7 +34001,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3395690579920326618}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -34001,8 +34076,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -35380,8 +35455,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -37504,7 +37579,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -38715,7 +38790,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &202579333650233387
+--- !u!114 &3762422108899808864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38724,9 +38799,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3395690579920326618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3649457641667952470
 GameObject:
   m_ObjectHideFlags: 0
@@ -38738,7 +38828,7 @@ GameObject:
   - component: {fileID: 8014441794944957882}
   - component: {fileID: 4419154025085615263}
   - component: {fileID: 3984534571547460458}
-  - component: {fileID: 6215453817802811331}
+  - component: {fileID: 3079740153613645979}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -38769,7 +38859,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3649457641667952470}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -38844,8 +38934,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -40223,8 +40313,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -42347,7 +42437,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -43558,7 +43648,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &6215453817802811331
+--- !u!114 &3079740153613645979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43567,9 +43657,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3649457641667952470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3800506040780488635
 GameObject:
   m_ObjectHideFlags: 0
@@ -43581,7 +43686,7 @@ GameObject:
   - component: {fileID: 7717844932295345387}
   - component: {fileID: 8185811931331489467}
   - component: {fileID: 8996054460259324082}
-  - component: {fileID: 7832181023704357695}
+  - component: {fileID: 4255547294122140514}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -43612,7 +43717,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3800506040780488635}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -43687,8 +43792,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -45066,8 +45171,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -47190,7 +47295,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -48401,7 +48506,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7832181023704357695
+--- !u!114 &4255547294122140514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48410,9 +48515,147 @@ MonoBehaviour:
   m_GameObject: {fileID: 3800506040780488635}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &4360147827464807128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3268566045222319062}
+  - component: {fileID: 907471271765943032}
+  - component: {fileID: 203801698588713119}
+  - component: {fileID: 1893337664405299649}
+  - component: {fileID: 8244283775651577971}
+  m_Layer: 6
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3268566045222319062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360147827464807128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.29, y: -0.84, z: 0}
+  m_LocalScale: {x: 10, y: 2.5, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7137358384386655699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &907471271765943032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360147827464807128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8, y: 2, z: 1}
+  m_Center: {x: -0.2, y: 1, z: 0}
+--- !u!54 &203801698588713119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360147827464807128}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &1893337664405299649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360147827464807128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+--- !u!114 &8244283775651577971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360147827464807128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1893337664405299649}
+        m_TargetAssemblyTypeName: TorchTrigger, Assembly-CSharp
+        m_MethodName: StayEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5002437681817932978
 GameObject:
   m_ObjectHideFlags: 0
@@ -48507,7 +48750,7 @@ GameObject:
   - component: {fileID: 7430355004158291645}
   - component: {fileID: 1390649718341036184}
   - component: {fileID: 884796181900732675}
-  - component: {fileID: 9173740529929578801}
+  - component: {fileID: 4481482312951772094}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -48538,7 +48781,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5272999074502732783}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -48613,8 +48856,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -49992,8 +50235,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -52116,7 +52359,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -53327,7 +53570,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &9173740529929578801
+--- !u!114 &4481482312951772094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53336,9 +53579,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5272999074502732783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5703540067810831479
 GameObject:
   m_ObjectHideFlags: 0
@@ -53350,7 +53608,7 @@ GameObject:
   - component: {fileID: 5299627837500349946}
   - component: {fileID: 8102383373500799250}
   - component: {fileID: 5932857663553649697}
-  - component: {fileID: 8651065750010251052}
+  - component: {fileID: 7350796111692864740}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -53381,7 +53639,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703540067810831479}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -53456,8 +53714,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -54835,8 +55093,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -56959,7 +57217,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -58170,7 +58428,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &8651065750010251052
+--- !u!114 &7350796111692864740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58179,9 +58437,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5703540067810831479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6784805482229812640
 GameObject:
   m_ObjectHideFlags: 0
@@ -58193,7 +58466,7 @@ GameObject:
   - component: {fileID: 1863276504903860610}
   - component: {fileID: 7804969487083475202}
   - component: {fileID: 2648308421364795185}
-  - component: {fileID: 4410981497167525224}
+  - component: {fileID: 8975856810684512287}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -58224,7 +58497,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6784805482229812640}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -58299,8 +58572,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -59678,8 +59951,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -61802,7 +62075,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -63013,7 +63286,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &4410981497167525224
+--- !u!114 &8975856810684512287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63022,9 +63295,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6784805482229812640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6825516171468784007
 GameObject:
   m_ObjectHideFlags: 0
@@ -67875,7 +68163,7 @@ GameObject:
   - component: {fileID: 9059611065689904191}
   - component: {fileID: 1622461313660136072}
   - component: {fileID: 6499398189713679266}
-  - component: {fileID: 7502847686858399065}
+  - component: {fileID: 6130943489728731912}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -67906,7 +68194,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6871535101225490886}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -67981,8 +68269,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -69360,8 +69648,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -71484,7 +71772,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -72695,7 +72983,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7502847686858399065
+--- !u!114 &6130943489728731912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72704,9 +72992,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6871535101225490886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6945243863357719041
 GameObject:
   m_ObjectHideFlags: 0
@@ -77663,7 +77966,7 @@ GameObject:
   - component: {fileID: 7325360570238674045}
   - component: {fileID: 8249506905407140100}
   - component: {fileID: 4477606974854227236}
-  - component: {fileID: 7531885801397504702}
+  - component: {fileID: 4340006936639588239}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -77694,7 +77997,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6998717552094421994}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -77769,8 +78072,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -79148,8 +79451,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -81272,7 +81575,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -82483,7 +82786,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7531885801397504702
+--- !u!114 &4340006936639588239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82492,9 +82795,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6998717552094421994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7231562931905874913
 GameObject:
   m_ObjectHideFlags: 0
@@ -87345,7 +87663,7 @@ GameObject:
   - component: {fileID: 3662799769550030701}
   - component: {fileID: 1476085413765107801}
   - component: {fileID: 7808156163491071136}
-  - component: {fileID: 4575609882552095580}
+  - component: {fileID: 7603485329857586521}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -87376,7 +87694,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7346306915562525272}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -87451,8 +87769,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -88830,8 +89148,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -90954,7 +91272,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -92165,7 +92483,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &4575609882552095580
+--- !u!114 &7603485329857586521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92174,9 +92492,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7346306915562525272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7864834089232438414
 GameObject:
   m_ObjectHideFlags: 0
@@ -111611,7 +111944,7 @@ GameObject:
   - component: {fileID: 7787114922926231516}
   - component: {fileID: 5594406397710119015}
   - component: {fileID: 1677391619473317969}
-  - component: {fileID: 4327707817556977850}
+  - component: {fileID: 5994802614128991039}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -111642,7 +111975,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8241923878354866915}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -111717,8 +112050,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -113096,8 +113429,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -115220,7 +115553,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -116431,7 +116764,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &4327707817556977850
+--- !u!114 &5994802614128991039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116440,9 +116773,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 8241923878354866915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8432597030649311834
 GameObject:
   m_ObjectHideFlags: 0
@@ -116454,7 +116802,7 @@ GameObject:
   - component: {fileID: 8961660132474084875}
   - component: {fileID: 1760937618469758297}
   - component: {fileID: 2982432814563142774}
-  - component: {fileID: 5058386441322013656}
+  - component: {fileID: 8434605008674022700}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -116485,7 +116833,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8432597030649311834}
   serializedVersion: 8
-  lengthInSec: 1.6
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -116560,8 +116908,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10
-      minScalar: 9
+      scalar: 5
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -117939,8 +118287,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: -0.2
+      scalar: -4
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -120063,7 +120411,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -121274,7 +121622,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5058386441322013656
+--- !u!114 &8434605008674022700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121283,9 +121631,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 8432597030649311834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f97b462040745f3ba9763c259630aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTriggerEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8905201056967858157
 GameObject:
   m_ObjectHideFlags: 0
@@ -126238,13 +126601,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8915339386633315591}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8142857463792077729}
   - {fileID: 4069014600991390639}
+  - {fileID: 3268566045222319062}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1595851935222152959
@@ -126277,6 +126641,7 @@ MonoBehaviour:
   - {fileID: 8559627210349244677}
   - {fileID: 8185811931331489467}
   - {fileID: 1390649718341036184}
+  _collider: {fileID: 4360147827464807128}
 --- !u!1 &8962904716702474470
 GameObject:
   m_ObjectHideFlags: 0

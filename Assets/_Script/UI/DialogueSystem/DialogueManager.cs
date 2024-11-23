@@ -8,10 +8,7 @@ using UnityEngine;
 [MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
 public class DialogueManager : MonoSingleton<DialogueManager>
 {
-    public int CurrentMessageIndex = 0;
-    
-    public DialogueMessageSO[] dialogueMessages;
-
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     
     public float dialoguePrintSpeed = 0.1f;
@@ -25,7 +22,6 @@ public class DialogueManager : MonoSingleton<DialogueManager>
     {
         base.Awake();
         _waitForSeconds = new WaitForSeconds(dialoguePrintSpeed);
-        CurrentMessageIndex = 0;
     }
 
     private void Update()
@@ -36,45 +32,38 @@ public class DialogueManager : MonoSingleton<DialogueManager>
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue(DialogueMessageSO dialogueMessage)
     {
-        StartCoroutine(nameof(PrintDialogue));
+        StartCoroutine(PrintDialogue(dialogueMessage));
     }
     
-    private IEnumerator PrintDialogue()
+    private IEnumerator PrintDialogue(DialogueMessageSO dialogueMessage)
     {
-        if (dialogueMessages.Length == CurrentMessageIndex)
-        {
-            OnDialogueEvent?.Invoke(_isDialogueOpen);
-            yield break;
-        }
-        
         _isDialogueOpen = true;
         OnDialogueEvent?.Invoke(_isDialogueOpen);
         _dialogueText.text = ""; 
         StringBuilder builder = new StringBuilder();
         
-        for (int i = 0; i < dialogueMessages[CurrentMessageIndex].message.Length; i++)
+        for (int i = 0; i < dialogueMessage.message.Length; i++)
         {
-            builder.Append(dialogueMessages[CurrentMessageIndex].message[i]);
+            builder.Append(dialogueMessage.message[i]);
 
             if (_isDialogueOpen == false)
             {
-                _dialogueText.text = dialogueMessages[CurrentMessageIndex].message;
+                _dialogueText.text = dialogueMessage.message;
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
-                CurrentMessageIndex++;
                 OnDialogueEvent?.Invoke(_isDialogueOpen);
                 yield break;
             }
             
             _dialogueText.text = builder.ToString();
+            _audioSource.Play();
             yield return _waitForSeconds;
         }
         
         _isDialogueOpen = false;
-        CurrentMessageIndex++;
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
-        
+
+        yield return new WaitForSeconds(2f);
         OnDialogueEvent?.Invoke(_isDialogueOpen);
     }
 }

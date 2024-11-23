@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public class GameOverPopUp : MonoBehaviour, IPopUpable
 
     public void PopUp()
     {
+        backGround.gameObject.SetActive(true);
         gameOverText.SetText(DescriptinSo.GetDescription());
         
         backGround.DOFade(0.7f , 0.7f).OnComplete(() =>
