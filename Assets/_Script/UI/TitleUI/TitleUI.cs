@@ -29,9 +29,12 @@ public class TitleUI : MonoBehaviour
     
     private IEnumerator GameStart()
     {
+        GameManager.Instance.isTitle = false;
+
         _titleCanvasGroup.interactable = false;
         _titleText.DOFade(0, 0.3f);
-        
+
+
         foreach (var button in _buttons)
         {
             button.transform.DOMoveX(_buttonOriginLocalPositionX + _buttonOffsetPosition, 0.3f);

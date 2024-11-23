@@ -15,7 +15,9 @@ public class GameManager : MonoSingleton<GameManager>
     private static int maxGoal;
     public static event Action OnBReached;
     public static GameState CurrentState { get; private set; } = GameState.A;
-    
+    public bool isTitle = true;
+
+
     public static void IncreaseMaxGoalCount()
     {
         maxGoal++;

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour
@@ -52,6 +53,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isTitle) return;
+
+
         StateMachine.currentState.Update();
         Flip();
         checkGroundBool = CheckGround();
@@ -66,6 +70,11 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Dead();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
     }
