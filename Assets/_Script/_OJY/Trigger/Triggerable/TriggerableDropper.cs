@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver, IOnExitReciver
+public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver
 {
     private bool damaged;
+    private Rigidbody rigid;
+    private void Awake()
+    {
+        rigid = GetComponent<Rigidbody>();
+        rigid.isKinematic = true;
+    }
     public void OnEnterRecive()
     {
         var gameState = GameManager.CurrentState;
@@ -19,10 +25,7 @@ public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver, IOnExi
                 break;
         }
     }
-    public void OnExitRecive()
-    {
-        print("exot");
-    }
+
     private void DamageBox()
     {
         damaged = true;
@@ -30,6 +33,8 @@ public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver, IOnExi
     }
     private void DropBox()
     {
+        rigid.isKinematic = false;
+        OnTrigger();
         print("box dropped");
     }
 }
