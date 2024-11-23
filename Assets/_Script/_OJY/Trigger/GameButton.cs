@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameButton : MonoBehaviour, IOnEnterReciver, IOnStayReciver, IOnExitReciver
 {
     [SerializeField] private float sizeY;
+    [SerializeField] private float multiplier = 4.5f;
     private Vector3 initialScale;
     private bool isMoving = false;
     [SerializeField] private Transform targetTransform;
@@ -19,7 +20,7 @@ public class GameButton : MonoBehaviour, IOnEnterReciver, IOnStayReciver, IOnExi
     }
     public void Size(float scale)
     {
-        Vector3 size = targetTransform.localScale - new Vector3(0, Time.deltaTime * scale);
+        Vector3 size = targetTransform.localScale - new Vector3(0, Time.deltaTime * scale * multiplier);
         size.y = Mathf.Clamp(size.y, sizeY, initialScale.y);
         targetTransform.localScale = size;
     }

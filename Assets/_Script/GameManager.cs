@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -18,7 +19,14 @@ public class GameManager : MonoSingleton<GameManager>
     public bool isTitle = true;
 
     public static bool isFirstScene = true;
-
+    public static int CurrentSceneIndex { get; private set; } = 0;
+    public static void OnSceneFinished()
+    {
+        CurrentSceneIndex++;
+        print(CurrentSceneIndex);
+        maxGoal = 0;
+        SceneManager.LoadScene(CurrentSceneIndex);
+    }
     public static void IncreaseMaxGoalCount()
     {
         maxGoal++;
