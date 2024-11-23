@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     [Header("Torchlight")] 
     public Torch torchlight;
     [SerializeField] private int torchlightCount;
+    [SerializeField] private float torchDeadTime;
+    private float torchDeadTimer;
+    
     
     private void Awake()
     {
@@ -63,6 +66,16 @@ public class Player : MonoBehaviour
     public void Dead()
     {
         StateMachine.ChangeState(PlayerStateEnum.Dead);
+    }
+
+    public void AddTorchTimer(float amount)
+    {
+        torchDeadTimer += amount;
+        if (torchDeadTimer >= torchDeadTime)
+        {
+            Dead();
+            torchDeadTimer = 0;
+        }
     }
     
     private void Flip()
