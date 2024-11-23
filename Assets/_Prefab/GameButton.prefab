@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 0e9789240153ee146829e4012b72e564, type: 3}
 --- !u!82 &3598758961160707872
 AudioSource:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 6a16c578c0310764f97639da65923f87, type: 3}
 --- !u!82 &5727930099019147749
 AudioSource:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c378048ec3a1efa4aa44d35a74befe6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: 0.05
+  minY: 0.25
   multiplier: 1.5
   targetTransform: {fileID: 3975113278282732112}
 --- !u!114 &3634425604618692183
@@ -611,6 +611,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameButton, Assembly-CSharp
         m_MethodName: OnEnterRecive
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3706105581467980100}
+        m_TargetAssemblyTypeName: AudioEmitterBase, Assembly-CSharp
+        m_MethodName: PlaySoundIdx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -665,6 +677,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameButton, Assembly-CSharp
         m_MethodName: OnExitRecive
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7875230209529264832}
+        m_TargetAssemblyTypeName: AudioEmitterBase, Assembly-CSharp
+        m_MethodName: PlaySoundIdx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

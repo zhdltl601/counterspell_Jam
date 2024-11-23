@@ -7,6 +7,8 @@ public class TriggerableDoor : TriggerableObjectBase, IOnEnterReciver, IOnStayRe
     [SerializeField] private float maxY;
     private Vector3 initialPosition;
     private bool isMoving = false;
+    private bool isCritical = false;
+    [SerializeField] ColliderActiver colliderActiver;
     private void Awake()
     {
         initialPosition = transform.position;
@@ -15,9 +17,12 @@ public class TriggerableDoor : TriggerableObjectBase, IOnEnterReciver, IOnStayRe
     {
         if (isMoving == false)
             Move(-1);
+        colliderActiver.SetColliderActive(isCritical);
     }
     public void Move(float yVal)
     {
+        isCritical = yVal < 0;
+        print(isCritical);
         Vector3 pos = transform.position + new Vector3(0, Time.deltaTime * yVal);
         pos.y = Mathf.Clamp(pos.y, initialPosition.y, initialPosition.y + maxY);
         transform.position = pos;
@@ -28,6 +33,7 @@ public class TriggerableDoor : TriggerableObjectBase, IOnEnterReciver, IOnStayRe
     }
     public void OnStayRecive()
     {
+        print("onstay");
         Move(1);
     }
     public void OnExitRecive()

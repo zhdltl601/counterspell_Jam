@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver
 {
     private bool damaged;
     private Rigidbody rigid;
+    [SerializeField] private new MeshRenderer renderer;
+    [SerializeField] private Material damagedMaterial;
+    [SerializeField] private UnityEvent onDamaged;
+    [SerializeField] private UnityEvent onBreak;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -17,7 +22,8 @@ public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver
         switch (gameState)
         {
             case GameState.A:
-                DamageBox();
+                if(!damaged)
+                    DamageBox();
                 break;
             case GameState.B:
                 if (damaged)
@@ -28,12 +34,19 @@ public class TriggerableDropper : TriggerableObjectBase, IOnEnterReciver
 
     private void DamageBox()
     {
+        renderer.material = damagedMaterial;
+        Quaternion randomRot = Quaternion.Euler(new Vector3(Random.Range(-2, 3), Random.Range(-2, 3), Random.Range(-2, 3)));
+        renderer.transform.rotation = randomRot;
         damaged = true;
+        onDamaged.Invoke();
         print("damage");
+
     }
     private void DropBox()
     {
         rigid.isKinematic = false;
+        onBreak.Invoke();
+        damaged = false;
         OnTrigger();
         print("box dropped");
     }
