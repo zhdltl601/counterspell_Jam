@@ -5,7 +5,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 
-[MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
+//[MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
 public class DialogueManager : MonoSingleton<DialogueManager>
 {
     [SerializeField] private AudioSource _audioSource;
