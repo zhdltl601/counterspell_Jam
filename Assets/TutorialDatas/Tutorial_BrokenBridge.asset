@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08471a83a99594b49968016ad3f7a4c5, type: 3}
-  m_Name: Tutorial_Broken_Bridge
+  m_Name: Tutorial_BrokenBridge
   m_EditorClassIdentifier: 
   message: 'This is cracked bridge if you
 
