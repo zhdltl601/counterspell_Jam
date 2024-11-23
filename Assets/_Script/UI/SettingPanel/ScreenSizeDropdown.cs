@@ -18,19 +18,13 @@ public class ScreenSizeDropdown : MonoBehaviour
         switch (optionIdx)
         {
             case 1:
-                Screen.SetResolution(1366, 768, Screen.fullScreen);
-                Debug.Log(Screen.currentResolution);
-                Debug.Log(Screen.fullScreen);
+                Screen.SetResolution(1366, 768, UIManager.fullScreen);
                 break;
             case 2:
-                Screen.SetResolution(1920, 1080, Screen.fullScreen);
-                Debug.Log(Screen.currentResolution);
-                Debug.Log(Screen.fullScreen);
+                Screen.SetResolution(1920, 1080, UIManager.fullScreen);
                 break;
             case 3:
-                Screen.SetResolution(2560, 1440, Screen.fullScreen);
-                Debug.Log(Screen.currentResolution);
-                Debug.Log(Screen.fullScreen);
+                Screen.SetResolution(2560, 1440, UIManager.fullScreen);
                 break;
             default:
                 break;
