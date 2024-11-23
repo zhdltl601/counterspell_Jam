@@ -825,6 +825,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3701267343071236882, guid: ef896a30ad5a0844cb8291d5fcda4851,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -70.88867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701267343071236882, guid: ef896a30ad5a0844cb8291d5fcda4851,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -325.9041
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701267343071236882, guid: ef896a30ad5a0844cb8291d5fcda4851,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -19.333313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701267343071236882, guid: ef896a30ad5a0844cb8291d5fcda4851,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -419.8086
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701267343071236882, guid: ef896a30ad5a0844cb8291d5fcda4851,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3713057494086836145, guid: ef896a30ad5a0844cb8291d5fcda4851,
         type: 3}
       propertyPath: onTriggerEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
