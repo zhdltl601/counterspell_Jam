@@ -1,10 +1,10 @@
-using DG.Tweening;
+using System;
 using UnityEngine;
 
 public class Ploatform : MonoBehaviour
 {
     public Transform target;
-    private Vector3 origin;
+    [SerializeField] private Vector3 origin;
     private AudioSource audioSource;
     
     [SerializeField] private float time;
@@ -14,6 +14,9 @@ public class Ploatform : MonoBehaviour
     [SerializeField] private Color redColor;
 
     public Light PointLight;
+    [SerializeField] private bool isMoving;
+    [SerializeField] private Vector3 realTarget;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,30 +24,47 @@ public class Ploatform : MonoBehaviour
         
         PointLight.color = redColor; 
     }
-    
-    private void OnCollisionEnter(Collision other)
+
+    private void FixedUpdate()
     {
-        Vector3 realTarget = GameManager.CurrentState == GameState.A ? target.position : origin;
-        
-        PointLight.color = greenColor; 
-        if((whatIsPlayer & (1 << other.gameObject.layer)) != 0)
+        if (isMoving)
         {
-            other.gameObject.transform.SetParent(transform);
-            transform.DOMove(realTarget, time).SetEase(Ease.InQuint).OnComplete(() =>
+            transform.position = Vector3.MoveTowards(transform.position, realTarget, Time.deltaTime * time);
+            
+            if (Vector3.Distance(transform.position, realTarget) < 0.1f)
             {
+                transform.position = realTarget;
                 PointLight.color = redColor;
-            });
-            audioSource.Play();
+                
+                Debug.Log("도착");
+                
+                isMoving = false;
+            }
         }
     }
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if ((whatIsPlayer & (1 << other.gameObject.layer)) != 0)
+        {
+            isMoving = true;
+            other.gameObject.transform.SetParent(transform);
+            
+            realTarget = GameManager.CurrentState == GameState.A ? target.position : origin;
+            print(GameManager.CurrentState == GameState.A);    
+                        
+            PointLight.color = greenColor; 
+            audioSource.Play(); 
+        }
+    }
+
     private void OnCollisionExit(Collision other)
     {
-        if((whatIsPlayer & (1 << other.gameObject.layer)) != 0)
+        if ((whatIsPlayer & (1 << other.gameObject.layer)) != 0)
         {
-            other.gameObject.transform.SetParent(null);    
+            isMoving = false;
+            other.gameObject.transform.SetParent(null);
             PointLight.color = redColor;
         }
     }
-    
 }
