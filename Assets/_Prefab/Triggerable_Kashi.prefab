@@ -137,7 +137,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 1, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2355660410424910286
 MonoBehaviour:
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events: []
-  endPosition: {x: 0, y: 1.1, z: 0}
+  endPosition: {x: 0, y: 0.3, z: 0}
   endTime: 0.25
   kashi: {fileID: 6582852502426756285}
   curve:
