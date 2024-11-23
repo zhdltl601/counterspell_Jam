@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class TriggerInvokerBase : MonoBehaviour
 {
-    protected TriggerLinker triggerBase;
-    private void Awake()
-    {
-        triggerBase = GetComponentInChildren<TriggerLinker>();
-    }
+    [SerializeField] protected List<UnityEvent> onTriggerEvents;
     protected void InvokeTrigger()
     {
-        triggerBase.OnTrigger();
+        foreach (var item in onTriggerEvents)
+        {
+            item.Invoke();
+        }
     }
 }

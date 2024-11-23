@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 943791426208037248}
   - component: {fileID: 6607053488498610130}
   - component: {fileID: 2630486790712319141}
-  - component: {fileID: 5111134782125664401}
   - component: {fileID: 3602661550665362937}
   m_Layer: 6
-  m_Name: Trigger_OnStay
+  m_Name: TriggerIvk_OnStay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,19 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65dd198ecf56586439798c458cbb30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5111134782125664401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429691522573739162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b06435b50f86214586adb7568dba054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  events: []
+  onTriggerEvents: []
 --- !u!65 &3602661550665362937
 BoxCollider:
   m_ObjectHideFlags: 0
