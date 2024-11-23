@@ -73,16 +73,10 @@ public class Player : MonoBehaviour
                 CreateTorchlight();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            Dead();
-        }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
     }
 
     public void Dead()
@@ -106,11 +100,11 @@ public class Player : MonoBehaviour
         if(isDead)return;
         
         torchDeadTimer += amount;
-        if (torchDeadTimer >= torchDeadTime)
-        {
-            Dead();
-            torchDeadTimer = 0;
-        }
+        // if (torchDeadTimer >= torchDeadTime)
+        // {
+        //     Dead();
+        //     torchDeadTimer = 0;
+        // }
     }
     
     private void Flip()

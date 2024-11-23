@@ -27,20 +27,13 @@ public class GameManager : MonoSingleton<GameManager>
         goalCount = 0;
         SetStateToAState();
         int nextSceneIndex = CurrentSceneIndex + 1;
-        Debug.Log(nextSceneIndex);
+        CurrentSceneIndex = nextSceneIndex;
         SceneManager.LoadScene(nextSceneIndex);
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            OnSceneFinished();
-        }
-    }
+    
     public static void IncreaseMaxGoalCount()
     {
         maxGoal = Mathf.Clamp(maxGoal, maxGoal + 1, 2);
-        print("maxGoal" + maxGoal);
     }
     public static void OnGoal()
     {
@@ -61,7 +54,6 @@ public class GameManager : MonoSingleton<GameManager>
     
     private void HiglightPointA()
     {
-        print("ha");
         aColliderActiver.SetColliderActive(true);
     }
 }
