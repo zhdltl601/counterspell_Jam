@@ -20,8 +20,6 @@ public class Crasher : MonoBehaviour
                 , out RaycastHit hit, Mathf.Infinity))
         {
             _bottomPointPosition = hit.point;
-            
-            MoveDown();
         }
         else
         {
@@ -41,6 +39,12 @@ public class Crasher : MonoBehaviour
             .OnComplete(MoveDown);
     }
 
+    public void MoveStart()
+    {
+        //Do damage start!!
+        MoveDown();
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
         if (other.transform.TryGetComponent<Player>(out var player))
