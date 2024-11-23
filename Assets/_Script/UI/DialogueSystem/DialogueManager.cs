@@ -8,6 +8,7 @@ using UnityEngine;
 [MonoSingletonUsage(MonoSingletonFlags.DontDestroyOnLoad)]
 public class DialogueManager : MonoSingleton<DialogueManager>
 {
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     
     public float dialoguePrintSpeed = 0.1f;
@@ -56,6 +57,7 @@ public class DialogueManager : MonoSingleton<DialogueManager>
             }
             
             _dialogueText.text = builder.ToString();
+            _audioSource.Play();
             yield return _waitForSeconds;
         }
         
