@@ -16,9 +16,14 @@ public class TitleUI : MonoBehaviour
     private float _buttonOriginLocalPositionX;
 
     private readonly WaitForSeconds _waitForSeconds = new WaitForSeconds(0.4f);
-
+    
     private void Start()
     {
+        if (GameManager.isFirstScene == false)
+        {
+            gameObject.SetActive(false);
+        }
+
         _buttonOriginLocalPositionX = _buttons[0].GetComponent<RectTransform>().localPosition.x;
     }
 
@@ -30,11 +35,11 @@ public class TitleUI : MonoBehaviour
     private IEnumerator GameStart()
     {
         GameManager.Instance.isTitle = false;
-
+        GameManager.isFirstScene = false;
+        
         _titleCanvasGroup.interactable = false;
         _titleText.DOFade(0, 0.3f);
-
-
+        
         foreach (var button in _buttons)
         {
             button.transform.DOMoveX(_buttonOriginLocalPositionX + _buttonOffsetPosition, 0.3f);
@@ -44,6 +49,8 @@ public class TitleUI : MonoBehaviour
 
     public void ResetUIPosition()
     {
+        if(GameManager.isFirstScene == false)return;
+        
         _titleCanvasGroup.interactable = true;
         _titleText.DOFade(1, 0.3f);
         foreach (var button in _buttons)
