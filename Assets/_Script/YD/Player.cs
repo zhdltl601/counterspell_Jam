@@ -55,7 +55,11 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.isTitle) return;
 
-
+        if (transform.rotation.y <= -20)
+        {
+            Dead();
+        }
+        
         StateMachine.currentState.Update();
         Flip();
         checkGroundBool = CheckGround();
