@@ -17,25 +17,26 @@ public class PlayerMoveState : PlayerState
     public override void Update()
     {
         base.Update();
-        Flip();
+        Animator.SetFloat("Speed" , Mathf.Abs(xInput));
+        Player.Move(xInput * Player.MoveSpeed);
+
+        if (yInput)
+        {
+            StateMachine.ChangeState(PlayerStateEnum.Jump);
+        }
         
         if (xInput == 0.0f)
         {
             StateMachine.ChangeState(PlayerStateEnum.Idle);
         }
         
-        Rigidbody.velocity = new Vector3(xInput * Player.MoveSpeed, 0 , 0);
-        Animator.SetFloat("Speed" , Mathf.Abs(xInput));
     }
 
-    private void Flip()
-    {
-        Quaternion lookDir = Quaternion.LookRotation(Rigidbody.velocity);
-        Player.transform.rotation = lookDir;
-    }
-
+  
     public override void Exit()
     {
+        Animator.SetFloat("Speed" , 0);
+        
         base.Exit();
     }
 }

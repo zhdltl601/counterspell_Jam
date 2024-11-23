@@ -34,11 +34,6 @@ public class PlayerState
         xInput *= -1;
         
         yInput = Input.GetKeyDown(KeyCode.Space);
-
-        if (Player.CheckGround() == false)
-        {
-            StateMachine.ChangeState(PlayerStateEnum.Falling);
-        }
     }
         
     public virtual void Exit()

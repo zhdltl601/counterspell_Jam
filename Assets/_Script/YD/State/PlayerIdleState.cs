@@ -18,6 +18,11 @@
         {
             StateMachine.ChangeState(PlayerStateEnum.Run);
         }
+        
+        if (yInput)
+        {
+            StateMachine.ChangeState(PlayerStateEnum.Jump);
+        }
     }
 
     public override void Exit()

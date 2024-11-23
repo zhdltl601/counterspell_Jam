@@ -2,7 +2,7 @@
 
 public class PlayerJumpState : PlayerState
 {
-    private Rigidbody Rigidbody;
+    private readonly Rigidbody Rigidbody;
     public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolHash) : base(_player, _stateMachine, _animBoolHash)
     {
         Rigidbody = _player.Rigidbody;
@@ -12,17 +12,20 @@ public class PlayerJumpState : PlayerState
     {
         base.Enter();
         
-        Rigidbody.velocity = new Vector3(Rigidbody.velocity.x, Player.JumpForce , 0);
+        
+        Player.Jump(Player.JumpForce);
     }
-
+    
     public override void Update()
     {
         base.Update();
         
-        Rigidbody.velocity = new Vector3(xInput * Player.MoveSpeed, 0 , 0);
-
-       
+        if (Rigidbody.velocity.y < 0)
+        {
+            StateMachine.ChangeState(PlayerStateEnum.Falling);
+        }
         
+        Player.Move(xInput * Player.MoveSpeed/2);
     }
 
     public override void Exit()
