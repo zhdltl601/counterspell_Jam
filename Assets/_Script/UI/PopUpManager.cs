@@ -46,6 +46,12 @@ public class PopUpManager : MonoSingleton<PopUpManager>
         _popUpStack.Push(settingPanel);
     }
 
+    public void ShowGameOverPanel()
+    {
+        gameOverPopUp.PopUp();
+        _popUpStack.Push(gameOverPopUp);
+    }
+    
     public void UnloadAllPopUps()
     {
         while (_popUpStack.Count != 0)
