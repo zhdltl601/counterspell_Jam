@@ -15,8 +15,7 @@ public class DialoguePanel : MonoBehaviour
 
     public void PopUp()
     {
-        rectTransform.DOMoveY(0, 0.3f).OnComplete(
-            DialogueManager.Instance.StartDialogue);
+        rectTransform.DOMoveY(0, 0.3f);
     }
 
     public void PopDown()
@@ -26,7 +25,13 @@ public class DialoguePanel : MonoBehaviour
 
     private void PopUpHandler(bool value)
     {
-        if(value == false)
+        if (value == false)
+        {
             PopDown();
+        }
+        else
+        {
+            PopUp();
+        }
     }
 }

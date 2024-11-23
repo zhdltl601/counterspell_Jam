@@ -22,19 +22,6 @@ public class TitleUI : MonoBehaviour
         _buttonOriginLocalPositionX = _buttons[0].GetComponent<RectTransform>().localPosition.x;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            GameStartButtonClicked();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetUIPosition();
-        }
-    }
-
     public void GameStartButtonClicked()
     {
         StartCoroutine(nameof(GameStart));

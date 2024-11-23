@@ -644,6 +644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f1803c6176aec4497975c2e63bcc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backGround: {fileID: 0}
+  gameOverText: {fileID: 0}
+  DescriptinSo: {fileID: 0}
 --- !u!225 &167519458
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1432,10 +1435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentMessageIndex: 0
-  dialogueMessages:
-  - {fileID: 11400000, guid: b130f837a7b84554b91c995ca9b47f9b, type: 2}
-  - {fileID: 11400000, guid: 774c2f410ca04fe4da7cd053be0915e8, type: 2}
   _dialogueText: {fileID: 287978567}
+  _testSO: {fileID: 11400000, guid: 774c2f410ca04fe4da7cd053be0915e8, type: 2}
   dialoguePrintSpeed: 0.1
 --- !u!1 &406029204
 GameObject:

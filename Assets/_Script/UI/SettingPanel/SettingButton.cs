@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingButton : MonoBehaviour
+public class SettingButton : HoverButton
 {
     private Button _settingButton;
 
