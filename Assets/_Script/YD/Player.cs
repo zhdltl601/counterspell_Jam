@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public Rigidbody Rigidbody { get; private set; }
     public Animator Animator { get; private set; }
     
+    
+    public bool isDead;
+    [Space]
+    
     [Header("MoveInfo")]
     public float MoveSpeed;
     public float JumpForce;
@@ -17,7 +21,7 @@ public class Player : MonoBehaviour
     public float checkGroundDistance;
     
     [Header("Torchlight")] 
-    public GameObject torchlight;
+    public Torch torchlight;
     [SerializeField] private int torchlightCount;
     
     private void Awake()
@@ -41,14 +45,24 @@ public class Player : MonoBehaviour
         StateMachine.currentState.Update();
         Flip();
         checkGroundBool = CheckGround();
-
+        
         UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             CreateTorchlight();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Dead();
+        }
+
+    }
+
+    public void Dead()
+    {
+        StateMachine.ChangeState(PlayerStateEnum.Dead);
     }
     
     private void Flip()
@@ -63,6 +77,7 @@ public class Player : MonoBehaviour
         transform.rotation = lookDir;
     }
 
+    #region Movement
     public void Move(float speed)
     {
         Rigidbody.velocity = new Vector3(speed , Rigidbody.velocity.y , Rigidbody.velocity.z);
@@ -73,23 +88,31 @@ public class Player : MonoBehaviour
         Rigidbody.velocity = new Vector3(Rigidbody.velocity.x , jumpForce , Rigidbody.velocity.z);
     }
 
+    public void StopMovement()
+    {
+        Rigidbody.velocity = Vector3.zero;
+    }
+    
+    #endregion
+    
+    
+    
+    public bool CheckGround() => Physics.Raycast(checkGroundTrm.position , Vector3.down , checkGroundDistance , whatIsGround);
+
+    private void CreateTorchlight()
+    {
+        if(torchlightCount <=0 || !checkGroundBool)return;
+
+        --torchlightCount;
+        Torch newTorch = Instantiate(torchlight,transform.position,Quaternion.identity);
+       
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         
         Gizmos.DrawRay(checkGroundTrm.position ,  Vector3.down * checkGroundDistance);
     }
-
-    public bool CheckGround() => Physics.Raycast(checkGroundTrm.position , Vector3.down , checkGroundDistance , whatIsGround);
-
-    public void CreateTorchlight()
-    {
-        if(torchlightCount <=0)return;
-
-        --torchlightCount;
-        GameObject newTorch = Instantiate(torchlight,transform.position,Quaternion.identity);
-        newTorch.transform.Find("Fire/Light").gameObject.SetActive(true);
-    }
-    
 
 }

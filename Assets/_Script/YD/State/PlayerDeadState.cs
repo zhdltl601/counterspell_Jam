@@ -9,6 +9,8 @@
     public override void Enter()
     {
         base.Enter();
+        
+        Player.StopMovement();
         PopUpManager.Instance.ShowGameOverPanel();
     }
 
