@@ -3295,6 +3295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5806435840773791219}
   - component: {fileID: 993236135421010754}
+  - component: {fileID: 5806435840773791220}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -4177,7 +4178,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5806435840773791220}
+        m_TargetAssemblyTypeName: AudioChanger, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1003931084072629940
 Transform:
   m_ObjectHideFlags: 0
@@ -10653,6 +10666,19 @@ RectTransform:
   m_AnchoredPosition: {x: 499.85, y: -68.7}
   m_SizeDelta: {x: 960, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5806435840773791220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316092928456540275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42390d669ef9f994ba7659e46f40e780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 4eb851a3018b6e446ae2952ad2c939d4, type: 2}
 --- !u!114 &5826184302534450345
 MonoBehaviour:
   m_ObjectHideFlags: 0
