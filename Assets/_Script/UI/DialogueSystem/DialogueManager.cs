@@ -34,9 +34,42 @@ public class DialogueManager : MonoSingleton<DialogueManager>
 
     public void StartDialogue(DialogueMessageSO dialogueMessage)
     {
+        StopAllCoroutines();
         StartCoroutine(PrintDialogue(dialogueMessage));
     }
-    
+    public void StartDialogueOjy(string str)
+    {
+        StopAllCoroutines();
+        StartCoroutine(PrintDialogueOJY(str));
+    }
+    private IEnumerator PrintDialogueOJY(string dialogueMessage)
+    {
+        _isDialogueOpen = true;
+        OnDialogueEvent?.Invoke(_isDialogueOpen);
+        _dialogueText.text = "";
+        StringBuilder builder = new StringBuilder();
+
+        {
+            builder.Append(dialogueMessage);
+
+            if (_isDialogueOpen == false)
+            {
+                _dialogueText.text = dialogueMessage;
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                OnDialogueEvent?.Invoke(_isDialogueOpen);
+                yield break;
+            }
+
+            _dialogueText.text = builder.ToString();
+            _audioSource.Play();
+            yield return _waitForSeconds;
+        }
+
+        _isDialogueOpen = false;
+
+        yield return new WaitForSeconds(5f);
+        OnDialogueEvent?.Invoke(_isDialogueOpen);
+    }
     private IEnumerator PrintDialogue(DialogueMessageSO dialogueMessage)
     {
         _isDialogueOpen = true;
@@ -63,6 +96,12 @@ public class DialogueManager : MonoSingleton<DialogueManager>
         
         _isDialogueOpen = false;
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnDialogueEvent?.Invoke(_isDialogueOpen);
+            yield break;
+        }
+        
         yield return new WaitForSeconds(2f);
         OnDialogueEvent?.Invoke(_isDialogueOpen);
     }

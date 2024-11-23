@@ -1,6 +1,7 @@
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TitleButton : HoverButton
+public class RestartButton : HoverButton
 {
     private Button _titleButton;
 
@@ -16,7 +17,7 @@ public class TitleButton : HoverButton
     
     private void HandleResetTitleEvent()
     {
-        print("dajidwaioajodjoa ");
         UIManager.Instance.ResetTitle();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

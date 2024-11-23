@@ -12,8 +12,8 @@ public enum GameState
 public class GameManager : MonoSingleton<GameManager>
 {
     [SerializeField] private ColliderActiver aColliderActiver;
-    private static int goalCount;
-    private static int maxGoal;
+    [field: SerializeField] private static int goalCount;
+    [field: SerializeField] private static int maxGoal = 0;
     public static event Action OnBReached;
     public static GameState CurrentState { get; private set; } = GameState.A;
     public bool isTitle = true;
@@ -22,14 +22,23 @@ public class GameManager : MonoSingleton<GameManager>
     public static int CurrentSceneIndex { get; private set; } = 0;
     public static void OnSceneFinished()
     {
-        CurrentSceneIndex++;
-        print(CurrentSceneIndex);
         maxGoal = 0;
-        SceneManager.LoadScene(CurrentSceneIndex);
+        goalCount = 0;
+        CurrentState = GameState.A;
+        int nextSceneIndex = CurrentSceneIndex + 1;
+        Debug.Log(nextSceneIndex);
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            OnSceneFinished();
+        }
     }
     public static void IncreaseMaxGoalCount()
     {
-        maxGoal++;
+        maxGoal = Mathf.Clamp(maxGoal, maxGoal + 1, 2);
         print("maxGoal" + maxGoal);
     }
     public static void OnGoal()
