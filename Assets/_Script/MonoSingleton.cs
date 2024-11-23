@@ -64,7 +64,6 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
             Destroy(gameObject);
             return;
         }
-
         print("-AwakeInit-" + typeof(T).Name);
         //if (singletonFlag.HasFlag(MonoSingletonFlags.SingletonPreset)) _instance = this as T;//GetPresetSingleton();
         //else
