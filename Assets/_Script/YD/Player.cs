@@ -53,9 +53,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.isTitle) return;
+        if (GameManager.isFirstScene) return;
 
-        if (transform.rotation.y <= -20)
+
+        if (transform.position.y <= -20)
         {
             Dead();
         }
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
     {
         if(isDead)return;
 
+        isDead = true;
         Rigidbody.isKinematic = true;
         GetComponent<Collider>().enabled = false;
         StateMachine.ChangeState(PlayerStateEnum.Dead);
