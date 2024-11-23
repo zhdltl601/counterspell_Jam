@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour, IOnEnterReciver
 {
     private void Start()
     {
+        print(name);
         GameManager.IncreaseMaxGoalCount();
 
         transform.DORotate(new Vector3(0, 360, 0), 2f, RotateMode.FastBeyond360)

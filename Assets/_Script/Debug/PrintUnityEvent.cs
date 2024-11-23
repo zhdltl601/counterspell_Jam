@@ -6,6 +6,7 @@ public class PrintUnityEvent : MonoBehaviour
 {
     public void UE_Print(string str)
     {
+        GameManager.OnSceneFinished();
         print(str);
     }
 }
