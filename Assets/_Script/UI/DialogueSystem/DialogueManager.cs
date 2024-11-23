@@ -96,6 +96,12 @@ public class DialogueManager : MonoSingleton<DialogueManager>
         
         _isDialogueOpen = false;
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnDialogueEvent?.Invoke(_isDialogueOpen);
+            yield break;
+        }
+        
         yield return new WaitForSeconds(2f);
         OnDialogueEvent?.Invoke(_isDialogueOpen);
     }
