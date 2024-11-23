@@ -28,7 +28,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
             if (_instance is null)
             {
                 if (IsShuttingDown) return null;
-                if (singletonFlag.HasFlag(MonoSingletonFlags.SingletonPreset)) _instance = GetPresetSingleton();
+                //if (singletonFlag.HasFlag(MonoSingletonFlags.SingletonPreset)) _instance = GetPresetSingleton();
                 else _instance = RuntimeInitialize();
             }
             return _instance;
@@ -66,8 +66,9 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         }
 
         print("-AwakeInit-" + typeof(T).Name);
-        if (singletonFlag.HasFlag(MonoSingletonFlags.SingletonPreset)) _instance = this as T;//GetPresetSingleton();
-        else _instance = this as T;
+        //if (singletonFlag.HasFlag(MonoSingletonFlags.SingletonPreset)) _instance = this as T;//GetPresetSingleton();
+        //else
+        _instance = this as T;
     }
     protected virtual void OnDestroy()
     {
