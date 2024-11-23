@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Serialization;
+
 
 public class Player : MonoBehaviour
 {
@@ -20,7 +16,9 @@ public class Player : MonoBehaviour
     public Transform checkGroundTrm;
     public float checkGroundDistance;
     
-    
+    [Header("Torchlight")] 
+    public GameObject torchlight;
+    [SerializeField] private int torchlightCount;
     
     private void Awake()
     {
@@ -44,6 +42,12 @@ public class Player : MonoBehaviour
         checkGroundBool = CheckGround();
 
         UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            CreateTorchlight();
+        }
+        
     }
     
     private void Flip()
@@ -71,12 +75,20 @@ public class Player : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-
+        
         Gizmos.DrawRay(checkGroundTrm.position ,  Vector3.down * checkGroundDistance);
-
     }
 
     public bool CheckGround() => Physics.Raycast(checkGroundTrm.position , Vector3.down , checkGroundDistance , whatIsGround);
+
+    public void CreateTorchlight()
+    {
+        if(torchlightCount <=0)return;
+
+        --torchlightCount;
+        GameObject newTorch = Instantiate(torchlight,transform.position,Quaternion.identity);
+        newTorch.transform.Find("Fire/Light").gameObject.SetActive(true);
+    }
     
 
 }

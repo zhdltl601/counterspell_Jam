@@ -7,7 +7,8 @@ public enum PlayerStateEnum
     Idle,
     Run,
     Jump,
-    Falling
+    Falling,
+    Dead
 }
 
 public class PlayerStateMachine
