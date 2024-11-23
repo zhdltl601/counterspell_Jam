@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,7 +25,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         maxGoal = 0;
         goalCount = 0;
-        CurrentState = GameState.A;
+        SetStateToAState();
         int nextSceneIndex = CurrentSceneIndex + 1;
         Debug.Log(nextSceneIndex);
         SceneManager.LoadScene(nextSceneIndex);
@@ -52,6 +53,12 @@ public class GameManager : MonoSingleton<GameManager>
             Instance.HiglightPointA();
         }
     }
+
+    public static void SetStateToAState()
+    {
+        CurrentState = GameState.A;
+    }
+    
     private void HiglightPointA()
     {
         print("ha");

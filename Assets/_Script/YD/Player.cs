@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
     {
         if(isDead)return;
 
+        GameManager.SetStateToAState();
         isDead = true;
         Rigidbody.isKinematic = true;
         GetComponent<Collider>().enabled = false;

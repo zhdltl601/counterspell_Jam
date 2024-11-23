@@ -12,14 +12,14 @@ public class Goal : MonoBehaviour, IOnEnterReciver
         print(name);
         GameManager.IncreaseMaxGoalCount();
 
-        transform.DORotate(new Vector3(0, 360, 0), 2f, RotateMode.FastBeyond360)
+        /*transform.DORotate(new Vector3(0, 360, 0), 2f, RotateMode.FastBeyond360)
             .SetLoops(-1, LoopType.Incremental) 
             .SetEase(Ease.Linear);         
         
         
         transform.DOMoveY(transform.position.y + 0.5f, 1f)
             .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine);
+            .SetEase(Ease.InOutSine);*/
     }
     public void OnEnterRecive()
     {
