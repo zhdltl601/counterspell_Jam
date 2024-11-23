@@ -35,10 +35,15 @@ public class PopUpManager : MonoSingleton<PopUpManager>
             }
             else
             {
-                settingPanel.PopUp();
-                _popUpStack.Push(settingPanel);
+                ShowSettingPanel();
             }
         }
+    }
+
+    public void ShowSettingPanel()
+    {
+        settingPanel.PopUp();
+        _popUpStack.Push(settingPanel);
     }
 
     public void UnloadAllPopUps()
