@@ -65,11 +65,15 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
+        if(isDead)return;
+        
         StateMachine.ChangeState(PlayerStateEnum.Dead);
     }
 
     public void AddTorchTimer(float amount)
     {
+        if(isDead)return;
+        
         torchDeadTimer += amount;
         if (torchDeadTimer >= torchDeadTime)
         {
