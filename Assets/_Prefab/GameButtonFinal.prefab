@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeY: 0.2
+  multiplier: 4.5
   targetTransform: {fileID: 7797336567245744334}
 --- !u!114 &7581249963236819156
 MonoBehaviour:
@@ -232,7 +233,8 @@ AudioSource:
   m_GameObject: {fileID: 3257462972962449872}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4eb851a3018b6e446ae2952ad2c939d4,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -577,7 +579,8 @@ AudioSource:
   m_GameObject: {fileID: 6408143117956106967}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4eb851a3018b6e446ae2952ad2c939d4,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
