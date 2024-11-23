@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TitleButton : MonoBehaviour
+public class TitleButton : HoverButton
 {
     private Button _titleButton;
 
