@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
         StateMachine.AddState(PlayerStateEnum.Run , new PlayerMoveState(this , StateMachine , "Move"));
         StateMachine.AddState(PlayerStateEnum.Jump , new PlayerJumpState(this , StateMachine , "Jump"));
         StateMachine.AddState(PlayerStateEnum.Falling , new PlayerFallingState(this , StateMachine , "Falling"));
-                
+        StateMachine.AddState(PlayerStateEnum.Dead , new PlayerDeadState(this , StateMachine , "Dead"));
+        
         StateMachine.Init(PlayerStateEnum.Idle);
             
     }

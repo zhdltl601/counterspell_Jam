@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverPopUp : MonoBehaviour, IPopUpable
 {
     private CanvasGroup _gameOverPanelGroup;
-
+    [SerializeField] private Image backGround;
+    
     private void Awake()
     {
         _gameOverPanelGroup = GetComponent<CanvasGroup>();
@@ -15,7 +17,10 @@ public class GameOverPopUp : MonoBehaviour, IPopUpable
 
     public void PopUp()
     {
-        _gameOverPanelGroup.DOFade(1, 0.3f);
+        backGround.DOFade(0.7f , 0.7f).OnComplete(() =>
+        {
+            _gameOverPanelGroup.DOFade(1, 0.3f);
+        });
     }
 
     public void PopDown()
