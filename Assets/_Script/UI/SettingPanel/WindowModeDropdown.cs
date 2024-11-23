@@ -18,10 +18,12 @@ public class WindowModeDropdown : MonoBehaviour
         switch (optionIdx)
         {
             case 1:
-                Screen.SetResolution(Screen.width, Screen.height, true);
+                UIManager.fullScreen = true;
+                Screen.SetResolution(Screen.width, Screen.height, UIManager.fullScreen);
                 break;
             case 2:
-                Screen.SetResolution(Screen.width, Screen.height, false);
+                UIManager.fullScreen = false;
+                Screen.SetResolution(Screen.width, Screen.height, UIManager.fullScreen);
                 break;
             default:
                 break;

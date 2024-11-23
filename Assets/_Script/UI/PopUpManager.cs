@@ -9,6 +9,7 @@ public class PopUpManager : MonoSingleton<PopUpManager>
 {
     public SettingPanel settingPanel;
     public GameOverPopUp gameOverPopUp;
+    public DialoguePanel dialoguePanel;
     private Stack<IPopUpable> _popUpStack = new Stack<IPopUpable>();
 
     protected override void Awake()
@@ -29,6 +30,7 @@ public class PopUpManager : MonoSingleton<PopUpManager>
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             _popUpStack.TryPop(out var popUp);
+            
             if (popUp != null)
             {
                 popUp.PopDown();
