@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         Flip();
         checkGroundBool = CheckGround();
         
-        UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
+        //UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
         {
