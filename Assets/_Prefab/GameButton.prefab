@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2089408741436840174}
   - component: {fileID: 1184279042666496239}
   - component: {fileID: 2385100210703671268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 423628042043132020}
   - component: {fileID: 2629089511783387952}
   - component: {fileID: 5573959886167583884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 2812565637889381475}
   - component: {fileID: 5414295689343989663}
   - component: {fileID: 3369958579009079310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AudioEmitterOnEnter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7174927093132597508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ButtomVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 3157181860877627616}
   - component: {fileID: 3098309476328575616}
   - component: {fileID: 3689610028035259315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AudioEmitterOnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9064110927620774999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
