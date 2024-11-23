@@ -11,7 +11,7 @@ public class PopUpManager : MonoSingleton<PopUpManager>
     public GameOverPopUp gameOverPopUp;
     public DialoguePanel dialoguePanel;
     private Stack<IPopUpable> _popUpStack = new Stack<IPopUpable>();
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -50,6 +50,8 @@ public class PopUpManager : MonoSingleton<PopUpManager>
 
     public void ShowGameOverPanel()
     {
+        gameOverPopUp.gameObject.SetActive(true);
+        
         gameOverPopUp.PopUp();
         _popUpStack.Push(gameOverPopUp);
     }
