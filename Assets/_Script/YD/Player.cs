@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         
         UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
         {
             CreateTorchlight();
         }
@@ -73,7 +73,9 @@ public class Player : MonoBehaviour
     public void Dead()
     {
         if(isDead)return;
-        
+
+        Rigidbody.isKinematic = true;
+        GetComponent<Collider>().enabled = false;
         StateMachine.ChangeState(PlayerStateEnum.Dead);
     }
 

@@ -4219,6 +4219,7 @@ MonoBehaviour:
     m_Bits: 192
   checkGroundTrm: {fileID: 1751774726}
   checkGroundDistance: 0.22
+  canCreateTorchlight: 0
   torchlight: {fileID: 1595851935222152959, guid: 47cdfb366f4a9834cbfa920eb4034e61,
     type: 3}
   torchlightCount: 20
