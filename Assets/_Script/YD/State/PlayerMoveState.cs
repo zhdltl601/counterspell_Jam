@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 public class PlayerMoveState : PlayerState
 {
@@ -17,6 +18,7 @@ public class PlayerMoveState : PlayerState
     public override void Update()
     {
         base.Update();
+        Player.Flip();
         Animator.SetFloat("Speed" , Mathf.Abs(xInput));
         Player.Move(xInput * Player.MoveSpeed);
 

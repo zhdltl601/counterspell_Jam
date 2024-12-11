@@ -12,7 +12,7 @@ public class GameOverPopUp : MonoBehaviour, IPopUpable
     private CanvasGroup _gameOverPanelGroup;
     [SerializeField] private Image backGround;
     [SerializeField] private TextMeshProUGUI gameOverText;
-    [SerializeField] private DeadDescriptinSO DescriptinSo;
+    [SerializeField] private DescriptionSO DescriptinSo;
     private void Awake()
     {
         _gameOverPanelGroup = GetComponent<CanvasGroup>();
@@ -21,7 +21,7 @@ public class GameOverPopUp : MonoBehaviour, IPopUpable
     public void PopUp()
     {
         backGround.gameObject.SetActive(true);
-        gameOverText.SetText(DescriptinSo.GetDescription());
+        gameOverText.SetText(DescriptinSo.GetDescriptionRandom());
         
         backGround.DOFade(0.7f , 0.7f).OnComplete(() =>
         {

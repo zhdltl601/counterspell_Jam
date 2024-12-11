@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameButton : MonoBehaviour, IOnEnterReciver, IOnStayReciver, IOnExitReciver
 {
+    [SerializeField] private Transform targetTransform;
+    
     [SerializeField] private float sizeY;
     [SerializeField] private float multiplier = 4.5f;
+    
     private Vector3 initialScale;
     private bool isMoving = false;
-    [SerializeField] private Transform targetTransform;
+    
     private void Awake()
     {
         initialScale = targetTransform.localScale;

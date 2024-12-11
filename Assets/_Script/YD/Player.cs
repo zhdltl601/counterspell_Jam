@@ -54,15 +54,13 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (GameManager.isFirstScene) return;
-
-
+        
         if (transform.position.y <= -20)
         {
             Dead();
         }
         
         StateMachine.currentState.Update();
-        Flip();
         checkGroundBool = CheckGround();
         
         //UI_DebugPlayer.Instance.GetList[0].text = StateMachine.currentState.ToString();
@@ -107,16 +105,13 @@ public class Player : MonoBehaviour
         // }
     }
     
-    private void Flip()
+    public void Flip()
     {
         Vector3 targetDir = Rigidbody.velocity;
         targetDir.y = 0;
         targetDir.z = 0;
         
         Quaternion lookDir = Quaternion.LookRotation(targetDir);
-        if (Quaternion.Angle(lookDir, Quaternion.identity) <= 0.1f) 
-            return;
-            
         transform.rotation = lookDir;
     }
 
